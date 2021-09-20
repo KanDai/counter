@@ -25,6 +25,19 @@ if ('serviceWorker' in navigator) {
     .then((reg) => console.log('Service worker registered.', reg))
 }
 </script>
+<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+<script>
+window.OneSignal = window.OneSignal || []
+OneSignal.push(()=> {
+  OneSignal.init({
+    appId: "cd6981a6-7e91-4e0a-97bd-cf80125f5eef",
+    safari_web_id: "web.onesignal.auto.3fd215f3-eebf-45ec-a840-b342bc8d8df9",
+    notifyButton: {
+      enable: true,
+    },
+  })
+})
+</script>
 </head>
 <body>
   <div class="container d-flex justify-content-center">
